@@ -1,0 +1,9 @@
+SIZE 9
+MAXHEALTH 15
+MAP
+O   ?S  O
+  #####  
+ S# ? #S 
+  # O #  
+OO# S #OO
+  ## ##

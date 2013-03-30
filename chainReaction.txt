@@ -1,0 +1,22 @@
+SIZE 23
+MAXHEALTH 5
+MAP
+OOOOOOOOOOOOOOOOOOOO
+O                  O
+O                  O
+O  OOOOOOOOOOOOOOOOO
+O  O
+O  O
+O  OOOOOOOOOOOOOOOOO
+O                  O
+O                  O
+O  OOOOOOOOOOOOOOOOO
+O  O
+O  O
+O  OOOOOOOOOOOOOOOOO
+O                  O
+O                  O
+O  OOOOOOOOOOOOOOOOO     
+O  O
+O  O               
+O  OOOOOOOOOOOOOOOOO

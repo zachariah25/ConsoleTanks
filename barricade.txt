@@ -1,0 +1,12 @@
+SIZE 17
+MAXHEALTH 10
+MAP
+    O       O
+ ? #O#     #O# ?
+    O       O
+ S #O#     #O# S
+    O   S   O
+   #O#     #O#
+    O       O 
+ ? #O#     #O# ?
+    O       O
