@@ -10,6 +10,7 @@ disabled buffering of output stream to improve performance
 """
 
 from colorama import init
+from sys import platform as _platform # for determining os
 init() #allows color printing
 import os
 import sys; sys.stdout = sys.stderr #avoids buffering output
@@ -581,11 +582,11 @@ class Board():
 
         if player == 1:
             os.system("title " + "Tanks --- Player 1 sucks!")
-            input("\nPlayer one hit!")
+            input("\nPlayer one hit! (enter to continue)")
             self.p1h -= 1
         elif player == 2:
             os.system("title " + "Tanks --- Player 2 sucks!")
-            input("\nPlayer two hit!")
+            input("\nPlayer two hit! (enter to continue)")
             self.p2h -= 1
 
         self.reset()
@@ -597,7 +598,7 @@ class Board():
         self.refresh()
 
         os.system("title " + "Tanks --- Both players suck!")
-        input("\nBoth players hit!")
+        input("\nBoth players hit! (enter to continue)")
         self.p1h -= 1
         self.p2h -= 1
         self.reset()
@@ -615,7 +616,15 @@ class Board():
         """
         Refreshes the game board. Call this after any movement.
         """
-        os.system('cls')
+        if _platform == "linux" or _platform == "linux2":
+            # linux
+            os.system('clear')
+        elif _platform == "darwin":
+            # OS X
+            pass
+        elif _platform == "win32":
+            os.system('cls')
+
         print(self)
 
 class _Getch:
