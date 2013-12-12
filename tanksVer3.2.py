@@ -657,7 +657,7 @@ class InputThread(threading.Thread):
         self.get = _Getch()
         self.p1moves = []
         self.p2moves = []
-        self.turn = False
+        #self.turn = False
         if random.randrange(0,2) == 1: #picks initial turn randomly
             self.turn = True
 
@@ -674,6 +674,7 @@ class InputThread(threading.Thread):
         """
         Returns the next move. Turn variable alternates to promote fairness.
         """
+
         if self.turn: #checks p1 first if turn = true
             if self.p1moves != []:
                 self.turn = False
@@ -711,6 +712,7 @@ def main():
     charGetter = InputThread()
     charGetter.daemon = True 
     charGetter.start()
+    charGetter.turn = False
 
     keepGoing = True
     while keepGoing:

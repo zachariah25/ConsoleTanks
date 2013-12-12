@@ -36,7 +36,7 @@ Have fun!
 
 TO RUN:
 
-Click on "Tanks".
+python tanksVer3.2.py
 
 MAP FILES:
 
